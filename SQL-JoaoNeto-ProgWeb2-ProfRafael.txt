@@ -1,0 +1,22 @@
+create database AdminCrudDB;
+
+use AdminCrudDB;
+
+create table cliente(
+    codigo int primary key auto_increment,
+    nome varchar(40),
+    email varchar(40),
+    tipo varchar(30),
+    cpf_cnpj varchar(30),
+    telefone varchar(30)
+)
+
+INSERT INTO cliente (nome, email, tipo, cpf_cnpj, telefone) VALUES("joao", "joao@joao", "PF", "55555", "55555"),
+("juca", "juca@juca", "PF", "4444", "44444"), ("pedro", "pedro@pedro", "PF", "33333", "333333");
+
+select * from cliente
+
+UPDATE cliente SET nome = "juca da silva", email = "juca@juca", tipo = "PF", cpf_cnpj = "55555", telefone = "55555"  WHERE codigo = 4
+
+DELETE FROM cliente WHERE codigo = 8
+
